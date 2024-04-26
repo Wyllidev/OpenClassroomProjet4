@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,6 +24,55 @@ body {
 }
 .logo .logo__img {
   width: 162px;
+}
+
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 10px;
+}
+.footer .footer__logo {
+  font-family: Shrikhand;
+  font-size: 20px;
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.footer .footer__text {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.footer .footer__text .footer__text__logo {
+  font-size: 15px;
+}
+.footer .footer__text__modgap {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+}
+.footer .footer__text__modgap .footer__text__icone {
+  font-size: 15px;
+}
+
+header .logo {
+  display: flex;
+  box-shadow: none;
+  align-items: flex-start;
+  position: relative;
+}
+header .logo i {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+}
+header .logo .logo__img {
+  box-shadow: none;
 }
 
 .icone-localisation {
@@ -100,6 +150,8 @@ body {
   font-size: 14px;
   position: absolute;
   left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .restaurants {
@@ -121,9 +173,9 @@ body {
 }
 .restaurants .restaurants__bloc .restaurants__bloc__card {
   display: flex;
-  min-width: 325px;
   max-width: 490px;
   width: 100%;
+  position: relative;
 }
 .restaurants .restaurants__bloc .restaurants__bloc__card a {
   text-decoration: none;
@@ -136,12 +188,16 @@ body {
   padding: 5px 10px 5px 10px;
   position: absolute;
   z-index: 1;
-  right: 275px;
+  right: 15px;
+  top: 15px;
+}
+.restaurants .restaurants__bloc .restaurants__bloc__card .restaurants__bloc__card__picture {
+  height: 194px;
+  overflow: hidden;
 }
 .restaurants .restaurants__bloc .restaurants__bloc__card .restaurants__bloc__card__picture img {
   object-fit: cover;
   width: 100%;
-  height: 194px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   position: relative;
@@ -163,43 +219,91 @@ body {
 }
 .restaurants .restaurants__bloc .restaurants__bloc__card .restaurants__bloc__card__description .heart {
   position: absolute;
-  left: 216px;
   bottom: 16px;
   font-size: 29px;
+  right: 20px;
 }
 
-.footer {
-  background-color: #353535;
+.illustration img {
+  width: 100%;
+}
+
+.cards-container {
+  padding: 30px 17px 40px 17px;
+  border-radius: 50px;
+  background-color: #F6F6F6;
+  position: relative;
+  margin-top: -50px;
+}
+.cards-container h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 42px;
+}
+.cards-container .heart {
+  position: absolute;
+  font-size: 21px;
+  right: 20px;
+  top: 20px;
+}
+.cards-container .card {
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  gap: 10px;
 }
-.footer .footer__logo {
-  font-family: Shrikhand;
+.cards-container .card h2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 7px;
+}
+.cards-container .card .card__dish {
+  background-color: white;
+  padding: 12px 15px 12px 15px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 20px;
+}
+.cards-container .card .card__dish h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.cards-container .card .card__dish p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.cards-container .card .card__dish .card__dish__price {
+  position: absolute;
+  right: 20px;
+  top: 32px;
+  margin-bottom: 12px;
+}
+.cards-container .card .card__dish .card__dish__price span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #353535;
+}
+.cards-container a {
+  text-decoration: none;
+}
+.cards-container .card-order {
+  display: flex;
+  justify-content: center;
+}
+.cards-container .card-order .card-order__button {
+  background: rgb(255, 121, 218);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  padding: 18px 26px 18px 26px;
+  font-weight: 500;
+  border-radius: 100px;
   font-size: 20px;
   color: white;
-}
-.footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-}
-.footer .footer__text {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-.footer .footer__text .footer__text__logo {
-  font-size: 15px;
-}
-.footer .footer__text__modgap {
-  display: flex;
-  flex-direction: row;
-  gap: 11px;
-}
-.footer .footer__text__modgap .footer__text__icone {
-  font-size: 15px;
+  border-width: 0px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=style.css.map */

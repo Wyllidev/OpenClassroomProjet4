@@ -1,0 +1,14 @@
+// HEADER
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  padding-bottom: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
+
+  .logo__img {
+    width: 162px;
+  }
+}

@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  margin: auto;
+  height: 1312px;
+  font-family: 'Roboto';
+}
