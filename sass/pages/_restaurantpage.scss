@@ -1,3 +1,13 @@
+@keyframes MoveToLeft {
+  from {
+    left: 150%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
 .illustration {
   img {
     width: 100%;
@@ -14,6 +24,7 @@
   flex-direction: column;
   align-items: center;
 
+
   h1 {
     font-family: Shrikhand;
     font-size: 28px;
@@ -28,10 +39,30 @@
     top: 20px;
   }
 
+  .cards-container__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .anim__entrees {
+      animation: MoveToLeft 1.4s ease-in-out forwards;
+    }
+
+    .anim__plats {
+      animation: MoveToLeft 1.8s ease-in-out forwards;
+    }
+
+    .anim__desserts {
+      animation: MoveToLeft 2.2s ease-in-out forwards;
+    }
+  }
+
   .card {
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 
     h2 {
       font-size: 16px;
@@ -49,6 +80,8 @@
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       position: relative;
       margin-bottom: 20px;
+      overflow: hidden;
+      cursor: pointer;
 
       h3 {
         font-size: 18px;
@@ -60,17 +93,41 @@
         font-weight: 300;
       }
 
-      .card__dish__price {
-        position: absolute;
-        right: 20px;
-        top: 32px;
-        margin-bottom: 12px;
+      .card__dish__desc__price {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
 
-        span {
-          font-size: 15px;
-          font-weight: 700;
-          color: #353535;
+        .card__dish__desc__price__pos {
+          display: flex;
+          gap: 15px;
+
+          span {
+            font-size: 15px;
+            font-weight: 700;
+            color: #353535;
+          }
+
+          .checker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #99e2d0;
+            padding: 0px 13px;
+            margin-right: -62px;
+
+            i {
+              font-size: 20px;
+              color: #ffffff;
+            }
+          }
+
         }
+      }
+
+      &:hover .card__dish__desc__price__pos {
+        margin-right: 47px;
+        transition: 0.5s ease-in-out;
       }
     }
   }
@@ -93,6 +150,12 @@
     margin-top: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     width: 200px;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+      transition-duration: 1s;
+    }
   }
 
 }
