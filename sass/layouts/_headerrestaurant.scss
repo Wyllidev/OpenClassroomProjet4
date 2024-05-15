@@ -5,14 +5,18 @@ header {
     align-items: flex-start;
     position: relative;
 
-    i {
-      position: absolute;
-      left: 20px;
-      top: 5px;
-    }
+    a {
+      text-decoration: none;
 
-    .logo__img {
-      box-shadow: none;
+      i {
+        position: absolute;
+        left: 20px;
+        top: 5px;
+      }
+
+      .logo__img {
+        box-shadow: none;
+      }
     }
   }
 }
