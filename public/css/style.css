@@ -25,7 +25,6 @@ body {
   height: 21px;
 }
 .heart .heart__anim .heart {
-  position: absolute;
   width: 21px;
   height: 21px;
   font-size: 21px;
@@ -77,28 +76,66 @@ body {
   font-size: 20px;
   color: white;
 }
-.footer a {
+.footer .footer__com {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .footer__com a {
   text-decoration: none;
   color: white;
   font-size: 16px;
 }
-.footer .footer__text {
+.footer .footer__com .footer__text {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  font-weight: 500;
 }
-.footer .footer__text .footer__text__logo {
+.footer .footer__com .footer__text .footer__text__logo {
   font-size: 15px;
 }
-.footer .footer__text__modgap {
+.footer .footer__com .footer__text__modgap {
   display: flex;
   flex-direction: row;
   gap: 11px;
 }
-.footer .footer__text__modgap .footer__text__icone {
+.footer .footer__com .footer__text__modgap .footer__text__icone {
   font-size: 15px;
 }
+.footer .footer__info {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .footer__info a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
 
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+    gap: 70px;
+    align-items: center;
+    padding: 50px 80px 30px 30px;
+  }
+  .footer a {
+    text-decoration: none;
+    color: white;
+  }
+  .footer .footer__com {
+    flex-direction: row;
+    order: 2;
+  }
+  .footer .footer__info {
+    order: 1;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
 header .logo {
   display: flex;
   box-shadow: none;
@@ -108,12 +145,12 @@ header .logo {
 header .logo a {
   text-decoration: none;
 }
-header .logo a i {
+header .logo i {
   position: absolute;
   left: 20px;
   top: 5px;
 }
-header .logo a .logo__img {
+header .logo .logo__img {
   box-shadow: none;
 }
 
@@ -369,6 +406,24 @@ header .logo a .logo__img {
   gap: 5px;
 }
 
+@media (min-width: 1024px) {
+  .fonctionnement {
+    padding: 50px 185px 50px 170px;
+    margin: 0px;
+  }
+  .fonctionnement .fonctionnement__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+  }
+  .restaurants {
+    padding: 30px 170px 30px 170px;
+  }
+  .restaurants .restaurants__bloc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @keyframes MoveToLeft {
   from {
     left: 150%;
@@ -414,12 +469,34 @@ header .logo a .logo__img {
 }
 .cards-container .cards-container__menu .anim__entrees {
   animation: MoveToLeft 1.4s ease-in-out forwards;
+  margin-bottom: 20px;
 }
 .cards-container .cards-container__menu .anim__plats {
   animation: MoveToLeft 1.8s ease-in-out forwards;
+  margin-bottom: 20px;
 }
 .cards-container .cards-container__menu .anim__desserts {
   animation: MoveToLeft 2.2s ease-in-out forwards;
+}
+.cards-container .cards-container__menu .card-order {
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 121, 218);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  padding: 18px 26px 18px 26px;
+  font-weight: 500;
+  border-radius: 100px;
+  font-size: 20px;
+  color: white;
+  border-width: 0px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 200px;
+}
+.cards-container .cards-container__menu .card-order:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition-duration: 1s;
 }
 .cards-container .card {
   display: flex;
@@ -456,12 +533,12 @@ header .logo a .logo__img {
   font-size: 15px;
   font-weight: 300;
 }
-.cards-container .card .card__dish .card__dish__desc__price {
-  margin-left: 326px;
+.cards-container .card .card__dish .card__dish__price {
   margin-top: 16px;
   font-size: 15px;
   font-weight: 700;
   color: #353535;
+  margin-left: auto;
 }
 .cards-container .card .card__dish .checker {
   display: flex;
@@ -470,27 +547,32 @@ header .logo a .logo__img {
   background: #99e2d0;
   padding: 0px 13px;
   height: 64px;
-  margin: -35px -62px -20px 20px;
+  margin: -13px -63px -50px 20px;
 }
-.cards-container .card .card-order {
-  display: flex;
-  justify-content: center;
-  background: rgb(255, 121, 218);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  padding: 18px 26px 18px 26px;
-  font-weight: 500;
-  border-radius: 100px;
+.cards-container .card .card__dish .checker:hover {
+  margin: -13px -15px -50px 20px;
+}
+.cards-container .card .card__dish .checker i {
   font-size: 20px;
-  color: white;
-  border-width: 0px;
-  margin-top: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 200px;
+  color: #ffffff;
 }
-.cards-container .card .card-order:hover {
-  filter: brightness(1.1);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  transition-duration: 1s;
+.cards-container .card .card__dish:hover .card__dish__price {
+  margin-right: 47px;
+  transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .illustration img {
+    height: 383px;
+    object-fit: cover;
+  }
+  .cards-container {
+    margin: -40px 190px 0px 190px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 50px 200px 50px 200px;
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

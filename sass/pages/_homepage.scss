@@ -167,9 +167,29 @@
           flex-direction: column;
           gap: 5px;
         }
-
-
       }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .fonctionnement {
+    padding: 50px 185px 50px 170px;
+    margin: 0px;
+
+    .fonctionnement__menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      flex-wrap: wrap;
+    }
+  }
+
+  .restaurants {
+    padding: 30px 170px 30px 170px;
+
+    .restaurants__bloc {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
