@@ -1,7 +1,6 @@
 header {
   .logo {
     display: flex;
-    box-shadow: none;
     align-items: flex-start;
     position: relative;
 
@@ -19,6 +18,10 @@ header {
     .logo__img {
       box-shadow: none;
     }
+  }
+
+  .logo--restaurant {
+    box-shadow: none;
   }
 }
 

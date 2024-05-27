@@ -70,7 +70,7 @@ body {
   justify-content: center;
   margin-top: 14px;
   padding-bottom: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
   position: relative;
 }
@@ -157,7 +157,6 @@ body {
 }
 header .logo {
   display: flex;
-  box-shadow: none;
   align-items: flex-start;
   position: relative;
 }
@@ -171,6 +170,9 @@ header .logo i {
   top: 5px;
 }
 header .logo .logo__img {
+  box-shadow: none;
+}
+header .logo--restaurant {
   box-shadow: none;
 }
 
@@ -290,6 +292,9 @@ header .logo .logo__img {
   z-index: 1;
   position: relative;
 }
+.icone-localisation p {
+  font-size: 16px;
+}
 
 .info-explorer {
   display: flex;
@@ -302,9 +307,11 @@ header .logo .logo__img {
 }
 .info-explorer h1 {
   font-weight: 700;
+  font-size: 24px;
 }
 .info-explorer h2 {
   font-weight: 300;
+  font-size: 18px;
 }
 
 .fonctionnement {
@@ -352,13 +359,14 @@ header .logo .logo__img {
   flex-direction: column;
   background-color: #F6F6F6;
   margin: 0px;
-  padding: 20px;
+  padding: 50px 20px;
 }
 .restaurants .heart {
   margin-right: 24px;
 }
 .restaurants h1 {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  font-size: 24px;
 }
 .restaurants .restaurants__bloc {
   display: flex;
@@ -412,8 +420,17 @@ header .logo .logo__img {
   flex-direction: column;
   gap: 5px;
 }
+.restaurants .restaurants__bloc .restaurants__bloc__card .restaurants__bloc__card__description .restaurants__bloc__card__description__title h2 {
+  font-size: 18px;
+}
+.restaurants .restaurants__bloc .restaurants__bloc__card .restaurants__bloc__card__description .restaurants__bloc__card__description__title p {
+  font-size: 17px;
+}
 
 @media (min-width: 1024px) {
+  .info-explorer h1 {
+    font-size: 40px;
+  }
   .fonctionnement {
     padding: 50px 185px 50px 170px;
     margin: 0px;
@@ -456,6 +473,7 @@ header .logo .logo__img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-items: flex-start;
 }
 .cards-container a {
   text-decoration: none;
@@ -524,13 +542,17 @@ header .logo .logo__img {
 .cards-container .card .card__dish:hover .checker {
   margin: -13px -15px -50px 20px;
 }
-.cards-container .card .card__dish h3 {
-  font-size: 18px;
-  font-weight: 500;
+.cards-container .card .card__dish .card__dish__title {
+  white-space: nowrap;
+  overflow: hidden;
 }
-.cards-container .card .card__dish p {
-  font-size: 15px;
-  font-weight: 300;
+.cards-container .card .card__dish .card__dish__title h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cards-container .card .card__dish .card__dish__title p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .cards-container .card .card__dish .card__dish__price {
   margin-top: 16px;
@@ -545,7 +567,7 @@ header .logo .logo__img {
   justify-content: center;
   background: #99e2d0;
   padding: 0px 17px;
-  height: 65px;
+  height: 72px;
   margin: -13px -71px -50px 20px;
   transition: all ease-in-out 0.2s;
 }
@@ -565,6 +587,7 @@ header .logo .logo__img {
     border-bottom-right-radius: 0px;
     padding: 50px 200px 50px 200px;
     gap: 20px;
+    align-items: center;
   }
 }
 
